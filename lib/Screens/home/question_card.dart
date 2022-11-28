@@ -40,15 +40,15 @@ class QuestionCard extends GetView<QuestionPaperController> {
                       child: SizedBox(
                         height: Get.width * 0.15,
                         width: Get.width * 0.15,
-                        // child: CachedNetworkImage(
-                        //   placeholder: (context, url) => Container(
-                        //     alignment: Alignment.center,
-                        //     child: const CircularProgressIndicator(),
-                        //   ),
-                        //   errorWidget: (context, url, error) =>
-                        //       Image.asset("assets/images/app_splash_logo.png"),
-                        //   imageUrl: model.imageUrl!,
-                        // ),
+                        child: CachedNetworkImage(
+                          placeholder: (context, url) => Container(
+                            alignment: Alignment.center,
+                            child: const CircularProgressIndicator(),
+                          ),
+                          errorWidget: (context, url, error) =>
+                              Image.asset("assets/images/app_splash_logo.png"),
+                          imageUrl: model.imageUrl!,
+                        ),
                       ),
                     ),
                   ),
